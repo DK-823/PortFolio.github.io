@@ -108,15 +108,15 @@ footer blockquote {
 }
 
 .details-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    display: block; /* Changed to block for vertical alignment */
+    margin-top: 20px;
 }
 
 .detail-item {
+    margin-bottom: 20px; /* Ensure there's space between items */
+    padding: 15px;
     background-color: #f9f9f9;
     border-radius: 8px;
-    padding: 15px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -151,10 +151,6 @@ footer blockquote {
 
     h2 {
         font-size: 1.6rem;
-    }
-
-    .details-container {
-        grid-template-columns: 1fr;
     }
 
     .detail-item {
