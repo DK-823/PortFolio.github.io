@@ -7,17 +7,19 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    line-height: 1.6;
     background-color: #f4f7fc;
     color: #333;
+    line-height: 1.6;
 }
 
+/* General container */
 .container {
     width: 90%;
     margin: 0 auto;
     max-width: 1200px;
 }
 
+/* Header Section */
 header {
     background: linear-gradient(135deg, #6a11cb, #2575fc);
     color: white;
@@ -27,7 +29,7 @@ header {
 
 header h1 {
     font-size: 3rem;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 header p {
@@ -39,14 +41,30 @@ header p {
     color: #ff7f50;
 }
 
+.image-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.header-image {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Button styles */
 .btn {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 12px 30px;
     font-size: 1rem;
     margin-top: 20px;
     text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    border-radius: 30px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .primary-btn {
@@ -56,6 +74,7 @@ header p {
 
 .primary-btn:hover {
     background-color: #1d60d2;
+    transform: scale(1.05);
 }
 
 .secondary-btn {
@@ -65,15 +84,17 @@ header p {
 
 .secondary-btn:hover {
     background-color: #5b0db6;
+    transform: scale(1.05);
 }
 
+/* Section styles */
 section {
-    padding: 40px 0;
+    padding: 60px 0;
     text-align: center;
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 20px;
     color: #333;
 }
@@ -81,67 +102,73 @@ h2 {
 ul {
     list-style-type: none;
     padding: 0;
-}
-
-ul li {
-    margin-bottom: 15px;
     font-size: 1.1rem;
 }
 
+ul li {
+    margin-bottom: 12px;
+}
+
+/* Footer */
 footer {
     background-color: #2575fc;
     color: white;
     padding: 20px;
     text-align: center;
+    margin-top: 40px;
 }
 
 footer blockquote {
     font-style: italic;
+    font-size: 1.2rem;
     margin: 0;
 }
 
+/* Portfolio Details */
 .portfolio-details {
     background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
     padding: 30px;
 }
 
 .details-container {
-    display: block; /* Changed to block for vertical alignment */
+    display: block;
     margin-top: 20px;
 }
 
 .detail-item {
-    margin-bottom: 20px; /* Ensure there's space between items */
-    padding: 15px;
+    margin-bottom: 25px;
+    padding: 20px;
     background-color: #f9f9f9;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .detail-title {
     font-weight: 600;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: #2575fc;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
+.detail-item ul {
+    padding-left: 20px;
+    font-size: 1.1rem;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
     header h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
 
     header p {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 
     .container {
         width: 90%;
-    }
-
-    .projects, .skills, .social-links, .portfolio-details {
-        padding: 20px;
     }
 
     .btn {
@@ -150,15 +177,15 @@ footer blockquote {
     }
 
     h2 {
-        font-size: 1.6rem;
+        font-size: 2rem;
     }
 
     .detail-item {
-        padding: 10px;
+        padding: 15px;
     }
 
     .detail-title {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 
     ul li {
