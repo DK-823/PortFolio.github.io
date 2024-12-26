@@ -9,71 +9,216 @@
 </head>
 <body>
     <header>
-        <h1>Hello, We are  [Coders] 👋</h1>
-        <p>We are a team passionate about technology and problem-solving. Here's a glimpse of my work:</p>
+        <div class="container">
+            <h1>Hello, We are <span class="highlight">[Coders]</span> 👋</h1>
+            <p>We are a team passionate about technology and problem-solving. Here's a glimpse of our work:</p>
+            <button class="btn primary-btn">Contact Us</button>
+        </div>
     </header>
 
-    <section>
-        <h2>🛠️ Project</h2>
-        <ul>
-            <li><strong>Project 1</strong>: Many homeless individuals sleep in railway stations due to a lack of safe shelter, leading to discomfort and security concerns. There is a need for dedicated shelter options to reduce reliance on stations as sleeping areas.
-.</li>
-            
-        </ul>
-
-        <h2>🚀 Skills</h2>
-        <ul>
-            <li>C++, Python, JavaScript</li>
-            <li>Data Structures and Algorithms</li>
-            <li>Web Development (React.js, Node.js)</li>
-        </ul>
-
-        <h2>🌐 Find us online</h2>
-        <ul>
-            <li><a href="https://github.com/your-github-username" target="_blank">GitHub</a></li>
-            <li><a href="https://linkedin.com/in/your-linkedin-profile" target="_blank">LinkedIn</a></li>
-        </ul>
-
-        <h2>Portfolio Topic</h2>
-        <dl>
-            <dt>DAA</dt>
-            <dd>Algorithmic Problem Solving</dd>
-
-            <dt>Course Code</dt>
-            <dd>Course Code Placeholder</dd>
-
-            <dt>Name</dt>
-            <dd>Sindhu</dd>
-            <dd>Sangini</dd>
-            <dd>Riya</dd>
-            <dd>Kshitij</dd>
-
-            <dt>Roll No</dt>
-            <dd>114</dd>
-            <dd>104</dd>
-            <dd>113</dd>
-            <dd>105</dd>
-
-
-
-            <dt>SRN</dt>
-            <dd>01FE23BCI032</dd>
-            <dd>01FE23BCI009</dd>
-            <dd>01FE23BCI</dd>
-            <dd>01FE23BCI010</dd>
-
-
-            <dt>Course Instructor</dt>
-            <dd>KMMR Sir</dd>
-
-            <dt>University</dt>
-            <dd>KLE Tech University</dd>
-
-            <dt>Portfolio Topic/Domain</dt>
-            <dd>Google</dd>
-        </dl>
-
-        <blockquote>“The only way to do great work is to love what you do.” – Steve Jobs</blockquote>
+    <section class="projects">
+        <div class="container">
+            <h2>🛠️ Project</h2>
+            <ul>
+                <li><strong>Project 1</strong>: Many homeless individuals sleep in railway stations due to a lack of safe shelter, leading to discomfort and security concerns. There is a need for dedicated shelter options to reduce reliance on stations as sleeping areas.</li>
+            </ul>
+        </div>
     </section>
+
+    <section class="skills">
+        <div class="container">
+            <h2>🚀 Skills</h2>
+            <ul>
+                <li>C++, Python, JavaScript</li>
+                <li>Data Structures and Algorithms</li>
+                <li>Web Development (React.js, Node.js)</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="social-links">
+        <div class="container">
+            <h2>🌐 Find us online</h2>
+            <ul>
+                <li><a href="https://github.com/your-github-username" target="_blank" class="btn secondary-btn">GitHub</a></li>
+                <li><a href="https://linkedin.com/in/your-linkedin-profile" target="_blank" class="btn secondary-btn">LinkedIn</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="portfolio-details">
+        <div class="container">
+            <h2>Portfolio Details</h2>
+            <dl>
+                <dt>DAA</dt>
+                <dd>Algorithmic Problem Solving</dd>
+
+                <dt>Course Code</dt>
+                <dd>Course Code Placeholder</dd>
+
+                <dt>Name</dt>
+                <dd>Sindhu</dd>
+                <dd>Sangini</dd>
+                <dd>Riya</dd>
+                <dd>Kshitij</dd>
+
+                <dt>Roll No</dt>
+                <dd>114</dd>
+                <dd>104</dd>
+                <dd>113</dd>
+                <dd>105</dd>
+
+                <dt>SRN</dt>
+                <dd>01FE23BCI032</dd>
+                <dd>01FE23BCI009</dd>
+                <dd>01FE23BCI</dd>
+                <dd>01FE23BCI010</dd>
+
+                <dt>Course Instructor</dt>
+                <dd>KMMR Sir</dd>
+
+                <dt>University</dt>
+                <dd>KLE Tech University</dd>
+
+                <dt>Portfolio Topic/Domain</dt>
+                <dd>Google</dd>
+            </dl>
+        </div>
+    </section>
+
+    <footer>
+        <blockquote>“The only way to do great work is to love what you do.” – Steve Jobs</blockquote>
+    </footer>
 </body>
 </html>
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f7fc;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+header {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    padding: 50px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    color: #ff7f50;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    margin-top: 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.primary-btn {
+    background-color: #2575fc;
+    color: white;
+}
+
+.primary-btn:hover {
+    background-color: #1d60d2;
+}
+
+.secondary-btn {
+    background-color: #6a11cb;
+    color: white;
+}
+
+.secondary-btn:hover {
+    background-color: #5b0db6;
+}
+
+section {
+    padding: 40px 0;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+footer {
+    background-color: #2575fc;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer blockquote {
+    font-style: italic;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    .projects, .skills, .social-links, .portfolio-details {
+        padding: 20px;
+    }
+
+    .btn {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    ul li {
+        font-size: 1rem;
+    }
+}
