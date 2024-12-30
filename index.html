@@ -3,11 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Portfolio & KWIN City</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script>
+        // Function to toggle the visibility of additional sections
+        function toggleInfo(id) {
+            var section = document.getElementById(id);
+            if (section.style.display === "none" || section.style.display === "") {
+                section.style.display = "block";
+            } else {
+                section.style.display = "none";
+            }
+        }
+    </script>
 </head>
+
 <body>
+    <!-- Header Section -->
     <header>
         <div class="container">
             <h1>Hello, We are <span class="highlight">[Coders]</span> 👋</h1>
@@ -16,17 +29,21 @@
         <div class="image-container">
             <img src="DAA CITY PLAN.png" alt="Diagram of the DAA City Plan project" class="header-image">
         </div>
+        <h1>Welcome to KWIN City</h1>
+        <p>Your gateway to knowledge, innovation, and well-being.</p>
     </header>
 
+    <!-- Projects Section -->
     <section class="projects">
         <div class="container">
             <h2>🚀 Projects</h2>
             <ul>
-                <li><strong>Project </strong>: Many homeless individuals sleep in railway stations due to a lack of safety shelter, leading to discomfort and security concerns. There is a need for dedicated shelter options to reduce reliance on stations as sleeping areas.</li>
+                <li><strong>Project:</strong> Many homeless individuals sleep in railway stations due to a lack of safety shelter, leading to discomfort and security concerns. There is a need for dedicated shelter options to reduce reliance on stations as sleeping areas.</li>
             </ul>
         </div>
     </section>
 
+    <!-- Skills Section -->
     <section class="skills">
         <div class="container">
             <h2>🛠️ Skills</h2>
@@ -39,23 +56,25 @@
         </div>
     </section>
 
+    <!-- Social Links Section -->
     <section class="social-links">
         <div class="container">
             <h2>🌐 Find us online</h2>
             <ul>
-                <h2>Github</h2>
+                <h3>GitHub</h3>
                 <li><a href="https://github.com/DK-823" target="_blank" class="btn secondary-btn">GitHub</a></li>
-                <h2>LinkedIn</h2>
-                       <li><a href="https://www.linkedin.com/in/sindhu-kesaraju-036135344" target="_blank" class="btn secondary-btn">Sindhu K</a></li>
+                <h3>LinkedIn</h3>
+                <li><a href="https://www.linkedin.com/in/sindhu-kesaraju-036135344" target="_blank" class="btn secondary-btn">Sindhu K</a></li>
                 <li><a href="https://www.linkedin.com/in/sangini-shee" target="_blank" class="btn secondary-btn">Sangini S</a></li>
                 <li><a href="https://www.linkedin.com/in/kshitij-h-457483343/" target="_blank" class="btn secondary-btn">Kshitij H</a></li>
             </ul>
         </div>
     </section>
 
+    <!-- Portfolio Details Section -->
     <section class="portfolio-details">
         <div class="container">
-            <h2>📚 Portfolio details</h2>
+            <h2>📚 Portfolio Details</h2>
             <div class="details-container">
                 <div class="detail-item">
                     <h3 class="detail-title">DAA</h3>
@@ -68,10 +87,10 @@
                 <div class="detail-item">
                     <h3 class="detail-title">The Coders</h3>
                     <ul>
-                   <li>Sindhu K</li>
-                     <li>Sangini S</li>
-                  <li>Riya P</li>
-                    <li>Kshitij H</li>
+                        <li>Sindhu K</li>
+                        <li>Sangini S</li>
+                        <li>Riya P</li>
+                        <li>Kshitij H</li>
                     </ul>
                 </div>
                 <div class="detail-item">
@@ -100,16 +119,67 @@
                     <h3 class="detail-title">University</h3>
                     <p>KLE Tech University</p>
                 </div>
-                <div class="detail-item">
-                    <h3 class="detail-title">Portfolio Topic/Domain</h3>
-                    <p>Google</p>
-                </div>
             </div>
         </div>
     </section>
 
+    <!-- Toggle Sections for KWIN City -->
+    <button class="button" onclick="toggleInfo('course-intro')">Course Introduction</button>
+    <button class="button" onclick="toggleInfo('business-ideas')">Business Ideas</button>
+
+    <section id="course-intro" style="display:none;">
+        <h2>Course Introduction</h2>
+        <p>Design and Analysis of Algorithms course helped us to learn efficient problem-solving techniques.</p>
+        <h3>Data Structures and Algorithms Studied So Far:</h3>
+        <ul>
+            <li>Binary Search Trees</li>
+            <li>AVL Trees</li>
+            <li>Red-Black Trees</li>
+            <li>2-3 Trees</li>
+        </ul>
+    </section>
+
+    <section id="business-ideas" style="display:none;">
+        <h2>Business Ideas</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>SLNO</th>
+                    <th>Business Case</th>
+                    <th>Description</th>
+                    <th>Owner</th>
+                    <th>Problem Tools</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>1</td><td>Optimal Tourist Routes</td><td>Optimize travel routes</td><td>ABC</td><td>Graphs</td></tr>
+                <tr><td>2</td><td>Sorting Menu Items</td><td>Sort by price/popularity</td><td>WXY</td><td>Quick sort</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- City Map Section -->
+    <section id="city-map">
+        <h2>City Map</h2>
+        <p>Explore KWIN City districts.</p>
+        <img src="https://i.ibb.co/W6FNqyd/projdaa.png" alt="City Map" style="width: 100%; max-width: 600px; border-radius: 8px;">
+    </section>
+
+    <!-- Team Members Section -->
+    <section>
+        <h2>Team Members</h2>
+        <ul>
+            <li>Vishal U Hosur</li>
+            <li>Varun S Terdal</li>
+            <li>Suleman A</li>
+            <li>Saif Ali</li>
+        </ul>
+    </section>
+
+    <!-- Footer -->
     <footer>
         <blockquote>“If you don't build your dream, someone else will hire you to help them build theirs.” – Dhirubhai Ambani</blockquote>
+        <p>&copy; 2024 KWIN City | Designed by Students of KLE Technological University</p>
     </footer>
 </body>
 </html>
