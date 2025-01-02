@@ -3,141 +3,277 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team Members Business Case Studies</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>IT/BT Sector Management in Tech City</title>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
+        /* General Styling */
         body {
-            margin: 0;
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background: linear-gradient(to right, #fbc2eb, #a6c1ee);
             color: #333;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 1rem;
         }
 
-        header {
+        h1 {
             text-align: center;
-            margin: 2rem 0;
-            padding: 1rem;
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            width: 100%;
-            max-width: 800px;
+            color: #4a0072;
+            animation: fadeIn 2s;
+            position: relative;
+            margin-bottom: 30px;
         }
 
-        header h1 {
-            font-size: 2.5rem;
-            color: #6a11cb;
-            margin: 0;
-        }
-
-        p.instructions {
-            font-weight: bold;
-            font-size: 1.2rem;
-            margin-top: 1rem;
-            text-align: center;
-            color: #fff;
+        h1:before {
+            content: '\f0e8';
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: #4a0072;
+            margin-right: 10px;
         }
 
         table {
             width: 100%;
-            max-width: 800px;
             border-collapse: collapse;
-            margin-top: 1rem;
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
         }
 
         th, td {
-            padding: 1rem;
+            padding: 15px;
             text-align: left;
-            border-bottom: 1px solid #ddd;
+            vertical-align: middle;
         }
 
         th {
-            background-color: #6a11cb;
+            background-color: #4a0072;
             color: white;
-            font-size: 1.2rem;
-        }
-
-        td a {
-            color: #2575fc;
-            text-decoration: none;
+            text-transform: uppercase;
             font-weight: bold;
         }
 
-        td a:hover {
-            text-decoration: underline;
-        }
-
-        footer {
+        td:first-child {
             text-align: center;
-            padding: 1rem;
-            background: rgba(0, 0, 0, 0.8);
-            color: #fff;
-            width: 100%;
-            font-size: 0.9rem;
-            margin-top: 2rem;
+            vertical-align: middle;
         }
 
+        td i {
+            margin-right: 10px;
+            font-size: 18px;
+        }
+
+        /* Hover Effect for Table Rows */
+        tr {
+            transition: background-color 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        tr:hover {
+            background-color: #d1b0e7;
+            cursor: pointer;
+            border: 2px solid #4a0072;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Updated "View Code" Button Styling */
+        .view-button {
+            background-color: #4a0072;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .view-button:hover {
+            background-color: #300046;
+            transform: scale(1.1); /* Slight zoom effect */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Shadow increase on hover */
+        }
+
+        .view-button i {
+            transition: transform 0.3s ease;
+        }
+
+        .view-button:hover i {
+            transform: rotate(15deg); /* Rotate icon slightly on hover */
+        }
+
+        /* Next Page Button Styling */
+        .next-button {
+            display: inline-block;
+            background-color: #4a0072;
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .next-button:hover {
+            background-color: #300046;
+            transform: scale(1.1); /* Slight zoom effect */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Shadow increase on hover */
+        }
+
+        .next-button i {
+            transition: transform 0.3s ease;
+        }
+
+        .next-button:hover i {
+            transform: translateX(5px); /* Slide arrow icon to the right */
+        }
+
+        /* Media Queries */
         @media (max-width: 768px) {
-            header h1 {
-                font-size: 2rem;
+            body {
+                margin: 10px;
+            }
+
+            table {
+                width: 100%;
+                font-size: 14px;
             }
 
             th, td {
-                padding: 0.8rem;
-                font-size: 0.9rem;
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                font-size: 14px;
+                margin: 5px;
             }
 
-            p.instructions {
-                font-size: 1rem;
+            h1 {
+                font-size: 20px;
+            }
+
+            table {
+                font-size: 12px;
+            }
+
+            th, td {
+                padding: 8px;
             }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Team Members Business Case Studies</h1>
-    </header>
+<h1>IT/BT Sector Management in Tech City</h1>
 
-    <p class="instructions">Click on the team member to know their business case studies</p>
+<table>
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Algorithm/Data Structure</th>
+            <th>Use Case</th>
+            <th>View Code</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <i class="fas fa-network-wired"></i>
+                <strong>Optimizing Network Infrastructure</strong>
+            </td>
+            <td>Dijkstra's Algorithm</td>
+            <td>Efficient routing of data in IT networks to minimize latency.</td>
+            <td>
+                 <a href='https://Sagarmirje.github.io/Kaverivan-city-plan/Sagar/Dijkstra Algorithm.html' class="view-button">
+                    <i class="fas fa-code"></i> View Code
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <i class="fas fa-search"></i>
+                <strong>Resource Allocation</strong>
+            </td>
+            <td>AVL Trees</td>
+            <td>Efficient storage and retrieval of server resources in IT systems.</td>
+            <td>
+                 <a href='https://Sagarmirje.github.io/Kaverivan-city-plan/Sagar/AVL Tree.html' class="view-button">
+                    <i class="fas fa-code"></i> View Code
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <i class="fas fa-robot"></i>
+                <strong>AI for Job Matching</strong>
+            </td>
+            <td>KMP String Matching</td>
+            <td>Efficiently matching job seekers with relevant IT opportunities.</td>
+            <td>
+                     <a href='https://Sagarmirje.github.io/Kaverivan-city-plan/Sagar/KMP String Matching.html' class="view-button">
+                    <i class="fas fa-code"></i> View Code
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <i class="fas fa-chart-line"></i>
+                <strong>Demand Prediction</strong>
+            </td>
+            <td>Segment Trees</td>
+            <td>Forecasting IT service demand in urban areas.</td>
+            <td>
+                <a href='https://Sagarmirje.github.io/Kaverivan-city-plan/Sagar/Segment Tree.html' class="view-button">
+                    <i class="fas fa-code"></i> View Code
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <i class="fas fa-recycle"></i>
+                <strong>Startup Collaboration</strong>
+            </td>
+            <td>Kruskal's Algorithm</td>
+            <td>Connecting IT startups through optimized collaborative networks.</td>
+            <td>
+              <a href="https://Sagarmirje.github.io/Kaverivan-city-plan/Sagar/Kruskal's Algorithm Code.html" class="view-button">
+                <i class="fas fa-code"></i> View Code
+              </a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <i class="fas fa-database"></i>
+                <strong>Data Storage Optimization</strong>
+            </td>
+            <td>HashMaps</td>
+            <td>Efficient data retrieval for large-scale IT systems.</td>
+            <td>
+                <a href='https://Sagarmirje.github.io/Kaverivan-city-plan/Sagar/Hash Maps.html' class="view-button">
+                    <i class="fas fa-code"></i> View Code
+                </a>
+            </td>
+        </tr>
+    </tbody>
+</table>
 
-    <table>
-        <thead>
-            <tr>
-                <th>Sr. No</th>
-                <th>Name</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>1</td>
-                <td><a href="https://darshanrt.github.io/kaveri-vana-smart-city/healthcare.html" target="_self">Sindhu K</a></td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td><a href="https://erannatp.github.io/Portfolio/tourism.html" target="_self">Sangini S</a></td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td><a href="https://sagarmirje.github.io/Kaverivan-city-plan/Business%20cases/IT-BT%20Sector.html" target="_self">Riya P</a></td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td><a href="https://vinaym0101.github.io/daaportfolio/business_cases.html" target="_self">Kshitij H</a></td>
-            </tr>
-        </tbody>
-    </table>
-
-    <footer>
-        &copy; 2024 Kshitij H. All Rights Reserved.
-    </footer>
+<div class="next-page-btn" style="text-align: center; margin-top: 20px;">
+    <a href='https://Sagarmirje.github.io/Kaverivan-city-plan/Business cases/water management.html' class="next-button">
+        <i class="fas fa-arrow-right"></i> Next Page
+    </a>
+</div>
 
 </body>
 </html>
