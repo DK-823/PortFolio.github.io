@@ -3,299 +3,197 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Overview - Kaveri Vana (Smart City)</title>
+    <title>Algorithm Course Overview</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         body {
-            font-family: 'Poppins', sans-serif;
             margin: 0;
-            background-color: #1F2937; /* Dark background for the whole page */
-            color: #ffffff;
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            background: linear-gradient(135deg, #4f9cd8, #ff6a7b); /* Changed the background gradient */
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            height: 100vh;
         }
+
         header {
             text-align: center;
-            padding: 3rem;
-            background-color: #111827; /* Dark header background */
+            padding: 2rem 1rem;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            margin-bottom: 2rem;
         }
+
         header h1 {
             font-size: 3rem;
             margin: 0;
+            color: #333;
         }
-        header h1 span {
-            display: block;
-            font-size: 1.5rem;
-            color: #facc15; /* Yellow color for the subheading */
-        }
+
         section {
-            padding: 3rem;
-            max-width: 1200px;
-            margin: auto;
-            background-color: #2D3748; /* Darker section background */
+            max-width: 900px;
+            margin: 1rem auto;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.9);
             border-radius: 10px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        section h2, h3 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            color: #facc15;
-            border-bottom: 2px solid #06b6d4;
-            display: inline-block;
-        }
-        section p {
-            margin: 1rem 0;
-            line-height: 1.6;
-            font-size: 1.1rem;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 2rem 0;
-            background-color: #1e293b;
-            color: #ffffff;
-            text-align: left;
-            border-radius: 8px;
-            overflow: hidden;
-        }
-        table th, table td {
-            padding: 1rem;
-            border: 1px solid #ffffff;
-        }
-        .container {
-            width: 80%;
-            margin: 50px auto;
-        }
-        canvas {
-            background: #ffffff;
-            padding: 20px;
-            border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
         }
-        @media screen and (max-width: 768px) {
+
+        section h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #ff6a7b; /* Added a highlight color */
+        }
+
+        p, ul {
+            margin: 0;
+            padding: 0;
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        li {
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+            background: rgba(240, 240, 240, 0.9);
+            border-radius: 5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            font-size: 1rem;
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Media Query for responsive design */
+        @media (max-width: 768px) {
             section {
-                padding: 2rem;
+                padding: 1rem;
+                margin: 0.5rem auto;
             }
-            table, table th, table td {
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            p, ul {
                 font-size: 0.9rem;
-            }
-            header h1 {
-                font-size: 2rem;
-            }
-            header h1 span {
-                font-size: 1rem;
             }
         }
     </style>
 </head>
 <body>
+
     <header>
-        <h1>Project Overview</h1>
-        <h1><span>ಕಾವೇರಿ ವನ (Kaveri Vana)</span></h1>
+        <h1>Algorithm Course Overview</h1>
     </header>
+
     <section>
-        <h2>Welcome to Smart City Kaveri Vana (ಕಾವೇರಿ ವನ)</h2>
-        
-        <!-- City Details -->
-        <p>
-            <strong style="color: #facc15;">City Name:</strong> <span style="color: #ffffff;">Kaveri Vana</span><br>
-            <strong style="color: #facc15;">Taluk:</strong> <span style="color: #ffffff;">Mysore</span><br>
-            <strong style="color: #facc15;">State:</strong> <span style="color: #ffffff;">Karnataka</span><br>
-            <strong style="color: #facc15;">Country:</strong> <span style="color: #ffffff;">India</span><br>
-            <strong style="color: #facc15;">Pincode:</strong> <span style="color: #ffffff;">570002</span><br>
-            <strong style="color: #facc15;">STD Code:</strong> <span style="color: #ffffff;">0822</span><br>
-            <strong style="color: #facc15;">Time Zone:</strong> <span style="color: #ffffff;">GMT+5:30</span>
-        </p>
-
-        <p>
-            <strong>Introduction:</strong> Kaveri Vana (ಕಾವೇರಿ ವನ) is a new smart city being planned over an area of 1500 square kilometers. The goal is to create a modern, efficient, and sustainable city that uses advanced technology to improve the quality of life for its residents. With innovative infrastructure, smart services, and eco-friendly designs, Kaveri Vana aims to become a model for future urban development.
-        </p>
-
-        <h2>Land Distribution and Budget</h2>
-
-        <!-- Table -->
-        <table>
-            <tr>
-                <th>Sr No</th>
-                <th>Main Land Distribution</th>
-                <th>Subparts</th>
-                <th>Land Distribution %</th>
-                <th>Budget (₹ Crores)</th>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>Main Green Spaces</td>
-                <td>Parks and Gardens, Agriculture Field, Waterfront Green Spaces, Eco-friendly Zones, Green Buffer Zones</td>
-                <td>15%</td>
-                <td>₹1,682.1</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Main Residential Areas</td>
-                <td>Apartments, Villas, Affordable Housing, Schools and Healthcare Centers</td>
-                <td>26%</td>
-                <td>₹2,915.64</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>Main Commercial Zones</td>
-                <td>Offices, Retail Spaces, High-Density Business Areas</td>
-                <td>9%</td>
-                <td>₹1,009.26</td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>Main Industrial Areas</td>
-                <td>Smart Factories, Logistics Hubs</td>
-                <td>5%</td>
-                <td>₹560.7</td>
-            </tr>
-            <tr>
-                <td>5</td>
-                <td>Main Utilities and Services</td>
-                <td>Renewable Energy, Water Treatment Facilities</td>
-                <td>4%</td>
-                <td>₹448.56</td>
-            </tr>
-            <tr>
-                <td>6</td>
-                <td>Main Tourist Spots</td>
-                <td>Zoo, Bird Sanctuary</td>
-                <td>3%</td>
-                <td>₹336.42</td>
-            </tr>
-            <tr>
-                <td>7</td>
-                <td>Main Recreational & Cultural Spaces</td>
-                <td>Cultural Centers, Sports Complexes</td>
-                <td>3%</td>
-                <td>₹336.42</td>
-            </tr>
-            <tr>
-                <td>8</td>
-                <td>Main Transportation Infrastructure</td>
-                <td>Roads, Bike Lanes, Smart Public Transport Hubs, Toll Plaza</td>
-                <td>11%</td>
-                <td>₹1,233.54</td>
-            </tr>
-            <tr>
-                <td colspan="4"><strong>Total Budget</strong></td>
-                <td><strong>₹11,214 Crores</strong></td>
-            </tr>
-        </table>
-
-        <!-- Bar Graphs for Land Distribution and Budget -->
-        <div class="container">
-            <h2 style="text-align: center;">Land Distribution (in %)</h2>
-            <canvas id="landDistributionChart"></canvas>
-        </div>
-
-        <div class="container">
-            <h2 style="text-align: center;">Budget Distribution (in %)</h2>
-            <canvas id="budgetDistributionChart"></canvas>
-        </div>
-
-        <!-- Map of Kaveri Vana -->
-        <div class="container">
-            <h2 style="text-align: center;">Map of Kaveri Vana</h2>
-            <img src="WhatsApp Image 2024-12-26 at 15.33.12_0aa25f1a.jpg" alt="Map of Kaveri Vana" style="width: 100%; max-width: 800px;">
-        </div>
-
-        <script>
-            // Data for Land Distribution
-            const landLabels = [
-                "Green Spaces", 
-                "Residential Areas", 
-                "Commercial Zones", 
-                "Industrial Areas", 
-                "Utilities", 
-                "Tourist Spots", 
-                "Recreational Spaces", 
-                "Transportation"
-            ];
-            const landData = [15, 26, 9, 5, 4, 3, 3, 11];
-
-            const landDistributionConfig = {
-                type: 'bar',
-                data: {
-                    labels: landLabels,
-                    datasets: [{ 
-                        label: 'Land Distribution (%)',
-                        data: landData,
-                        backgroundColor: [
-                            '#3b82f6', '#06b6d4', '#facc15', '#ef4444', 
-                            '#22c55e', '#f97316', '#6366f1', '#14b8a6'
-                        ],
-                        borderColor: '#000',
-                        borderWidth: 1
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    plugins: {
-                        legend: { display: false },
-                        title: {
-                            display: true,
-                            text: 'Land Distribution in %'
-                        }
-                    },
-                    scales: {
-                        x: { title: { display: true, text: 'Land Categories' } },
-                        y: { 
-                            title: { display: true, text: 'Percentage (%)' },
-                            beginAtZero: true
-                        }
-                    }
-                }
-            };
-
-            // Data for Budget Distribution
-            const budgetData = [15, 26, 9, 5, 4, 3, 3, 11];
-
-            const budgetDistributionConfig = {
-                type: 'bar',
-                data: {
-                    labels: landLabels,
-                    datasets: [{
-                        label: 'Budget Distribution (%)',
-                        data: budgetData,
-                        backgroundColor: [
-                            '#3b82f6', '#06b6d4', '#facc15', '#ef4444', 
-                            '#22c55e', '#f97316', '#6366f1', '#14b8a6'
-                        ],
-                        borderColor: '#000',
-                        borderWidth: 1
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    plugins: {
-                        legend: { display: false },
-                        title: {
-                            display: true,
-                            text: 'Budget Distribution in %'
-                        }
-                    },
-                    scales: {
-                        x: { title: { display: true, text: 'Budget Categories' } },
-                        y: { 
-                            title: { display: true, text: 'Percentage (%)' },
-                            beginAtZero: true
-                        }
-                    }
-                }
-            };
-
-            // Render the Charts
-            new Chart(
-                document.getElementById('landDistributionChart'),
-                landDistributionConfig
-            );
-
-            new Chart(
-                document.getElementById('budgetDistributionChart'),
-                budgetDistributionConfig
-            );
-        </script>
+        <h2>Introduction to Data Structures and Algorithms</h2>
+        <p>This course focuses on the design and analysis of algorithms and their real-world applications. The objective is to develop the capability to write algorithms for specific tasks, implement them using suitable data structures, and improve their efficiency. This course bridges theoretical knowledge and practical applications, making it crucial for solving computational problems.</p>
     </section>
+
+    <section>
+        <h2>Topics Covered</h2>
+        <ul>
+            <li>Linear and Non-linear Data Structures:
+                <ul>
+                    <li>Arrays</li>
+                    <li>Linked List</li>
+                    <li>Stacks and Queues</li>
+                    <li>Trees:
+                        <ul>
+                            <li>Binary Trees</li>
+                            <li>2-3 Trees</li>
+                            <li>Lookup Table</li>
+                            <li>Tries</li>
+                            <li>AVL Trees</li>
+                            <li>Red-Black Trees</li>
+                            <li>Skip Lists</li>
+                            <li>Segment Trees</li>
+                        </ul>
+                    </li>
+                    <li>Heaps</li>
+                
+                </ul>
+            </li>
+
+            <li>Algorithms:</li>
+            <ul>
+                <li>Sorting Algorithms:
+                    <ul>
+                        <li>Bubble Sort</li>
+                        <li>Insertion Sort</li>
+                        <li>Selection Sort</li>
+                        <li>Merge Sort</li>
+                        <li>Quick Sort</li>
+                        <li>Heap Sort</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <li>String Matching Algorithms:
+                <ul>
+                    <li>Brute Force</li>
+                    <li>Boyer-Moore</li>
+                    <li>KMP</li>
+                    <li>Rabin-Karp</li>
+                </ul>
+            </li>
+
+            <li>Graph Algorithms:
+                <ul>
+                    <li>Breadth-First Search (BFS)</li>
+                    <li>Depth-First Search (DFS)</li>
+                    <li>Kruskal’s Algorithm</li>
+                    <li>Dijkstra’s Algorithm</li>
+                    <li>Bellman-Ford Algorithm</li>
+                    <li>Floyd-Warshall Algorithm</li>
+                </ul>
+            </li>
+
+            <li>Backtracking Algorithms:
+                <ul>
+                    <li>N-Queen Problem</li>
+                    <li>Subset Generation</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Real-World Applications</h2>
+        <p>Efficient data structures and algorithms are essential to solving real-world problems in minimal time. Some examples include:</p>
+        <ul>
+            <li>Optimizing delivery routes for logistics companies using graph algorithms like Dijkstra's.</li>
+            <li>Dynamic memory allocation in operating systems using heaps.</li>
+            <li>Efficient text searching in large documents using string matching algorithms like KMP.</li>
+            <li>Real-time traffic management systems leveraging shortest path algorithms.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Project Repository</h2>
+        <p>Algorithms: Development and optimization of algorithms for smart city planning.</p>
+        <p>Data: Datasets for testing and validation.</p>
+    </section>
+
+    <footer>
+        &copy; 2024 Eranna Patil. All Rights Reserved.
+    </footer>
+
 </body>
 </html>
