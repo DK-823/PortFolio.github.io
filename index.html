@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - DAA Portfolio</title>
+    <title>DAA Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         /* Basic Reset */
         * {
@@ -16,7 +15,7 @@
 
         /* Body styling */
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Arial', sans-serif;
             background-color: #f4f4f9;
             color: #333;
         }
@@ -27,95 +26,61 @@
             margin: 0 auto;
         }
 
-        /* Navigation bar */
+        /* Navigation Bar */
         nav {
-            margin: 20px 0;
+            margin: 40px 0;
             text-align: center;
         }
 
-        nav ul {
-            list-style-type: none;
-            padding: 0;
+        /* Navigation Links Styling */
+        .nav-links {
             display: flex;
             justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
         }
 
-        nav ul li {
-            margin: 0 15px;
-        }
-
-        nav ul li a {
-            display: block;
+        .nav-box {
+            width: 200px;
+            height: 150px;
             background-color: #3498db;
             color: white;
-            text-decoration: none;
-            padding: 15px 25px;
-            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             text-align: center;
+            font-size: 1.5rem;
             font-weight: bold;
-            transition: background-color 0.3s ease;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            cursor: pointer;
         }
 
-        nav ul li a:hover {
+        .nav-box:hover {
             background-color: #2980b9;
+            transform: scale(1.05);
         }
 
-        /* Header Styling */
+        /* Header Section */
         header {
             background-color: #3498db;
             color: white;
             padding: 50px 0;
             text-align: center;
             border-radius: 8px;
-            margin-bottom: 20px;
+            margin-bottom: 40px;
         }
 
-        header .highlight {
-            color: #f39c12;
+        header h1 {
+            font-size: 3rem;
         }
 
-        header img {
-            max-width: 100%;
-            border-radius: 8px;
-            margin: 20px 0;
-        }
-
-        /* Section Styling */
-        .intro-section {
-            background-color: #fff;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .intro-section h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-        }
-
-        .intro-section p {
+        header p {
             font-size: 1.2rem;
-            margin-bottom: 30px;
+            margin-top: 10px;
         }
 
-        .button {
-            background-color: #3498db;
-            color: white;
-            border: none;
-            padding: 15px 30px;
-            font-size: 1rem;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .button:hover {
-            background-color: #2980b9;
-        }
-
-        /* Footer Styling */
+        /* Footer Section */
         footer {
             background-color: #3498db;
             color: white;
@@ -126,50 +91,44 @@
             width: 100%;
         }
 
-        footer blockquote {
-            font-style: italic;
-            margin-bottom: 10px;
+        footer p {
+            margin-top: 10px;
+            font-size: 1rem;
         }
     </style>
 </head>
 <body>
 
-    <!-- Navigation Bar -->
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="portfolio.html">My Portfolio</a></li>
-            <li><a href="team.html">Team Information</a></li>
-            <li><a href="reflection.html">Course Reflections</a></li>
-            <li><a href="implementation.html">Implementation</a></li>
-        </ul>
-    </nav>
-
     <!-- Header Section -->
     <header>
-        <div class="container">
-            <h1>Welcome to the <span class="highlight">DAA Portfolio</span></h1>
-            <p>Your gateway to exploring our journey through the Design and Analysis of Algorithms course.</p>
-        </div>
-        <div class="image-container">
-            <img src="DAA CITY PLAN.png" alt="Diagram of the DAA City Plan project" class="header-image">
-        </div>
+        <h1>Welcome to the <span style="color: #f39c12;">DAA Portfolio</span></h1>
+        <p>Your gateway to exploring the Design and Analysis of Algorithms course projects.</p>
     </header>
 
-    <!-- Intro Section -->
-    <section class="intro-section">
-        <h2>What is DAA Portfolio?</h2>
-        <p>Our portfolio showcases the projects and ideas we've worked on, as well as our learning and growth throughout the Design and Analysis of Algorithms (DAA) course.</p>
-        <p>We hope you explore our work and get to know our journey in problem-solving and programming.</p>
-        <a href="portfolio.html" class="button">Explore My Portfolio</a>
-    </section>
+    <!-- Navigation Section -->
+    <nav>
+        <div class="container">
+            <div class="nav-links">
+                <div class="nav-box">
+                    <a href="portfolio.html" style="text-decoration: none; color: white;">My Portfolio</a>
+                </div>
+                <div class="nav-box">
+                    <a href="team.html" style="text-decoration: none; color: white;">Team Information</a>
+                </div>
+                <div class="nav-box">
+                    <a href="reflection.html" style="text-decoration: none; color: white;">Course Reflections</a>
+                </div>
+                <div class="nav-box">
+                    <a href="implementation.html" style="text-decoration: none; color: white;">Implementation</a>
+                </div>
+            </div>
+        </div>
+    </nav>
 
     <!-- Footer Section -->
     <footer>
-        <blockquote>“If you don't build your dream, someone else will hire you to help them build theirs.” – Dhirubhai Ambani</blockquote>
-        <p>&copy; 2024 Mathura City | Designed by Students of KLE Technological University</p>
+        <p>&copy; 2024 DAA Portfolio | Designed by Students of KLE Technological University</p>
     </footer>
 
 </body>
 </html>
-
