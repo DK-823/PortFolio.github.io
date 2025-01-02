@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mathura City </title>
+    <title>Mathura City</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         body {
@@ -12,7 +12,7 @@
             color: #fff;
             overflow-y: auto;
             overflow-x: hidden;
-            background: linear-gradient(135deg, #34b7f1, #3ac8f7);
+            background: linear-gradient(135deg, #1a1a1a, #333);
             height: 100vh;
         }
 
@@ -28,7 +28,7 @@
         header {
             text-align: center;
             padding: 5rem 1rem;
-            background: rgba(0, 0, 0, 0.6);
+            background: rgba(0, 0, 0, 0.7);
             border-radius: 15px;
             margin: 3rem auto;
             max-width: 900px;
@@ -48,7 +48,7 @@
             padding: 3rem;
             display: flex;
             flex-wrap: wrap;
-            gap: 1.5rem;
+            gap: 2rem;
             justify-content: center;
         }
 
@@ -63,7 +63,7 @@
 
         .box {
             padding: 3rem;
-            background: rgba(0, 0, 0, 0.6);
+            background: rgba(30, 30, 30, 0.85);
             border-radius: 10px;
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
             text-align: center;
@@ -74,20 +74,20 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            text-align: center;
             position: relative;
+            color: #fff;
         }
 
         .box:hover {
             transform: translateY(-10px);
-            background-color: rgba(0, 0, 0, 0.8);
+            background-color: rgba(50, 50, 50, 0.9);
         }
 
         .box h3 {
             font-size: 1.5rem;
-            color: #fff;
             margin: 0;
             z-index: 1;
+            color: #ffd700;
         }
 
         .box::after {
@@ -97,23 +97,25 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.3);
+            background-color: rgba(0, 0, 0, 0.4);
             border-radius: 10px;
             transition: all 0.3s ease;
             z-index: 0;
         }
 
         .box:hover::after {
-            background-color: rgba(0, 0, 0, 0.5);
+            background-color: rgba(0, 0, 0, 0.6);
         }
 
         a {
             color: #ffd700;
             text-decoration: none;
             font-weight: bold;
+            transition: color 0.3s ease;
         }
 
         a:hover {
+            color: #ff1493;
             text-decoration: underline;
         }
 
@@ -132,7 +134,7 @@
             width: 100%;
             height: auto;
             border-radius: 15px;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
         }
 
         @media screen and (max-width: 768px) {
@@ -165,13 +167,12 @@
     </header>
 
     <section>
-        <h2>Navigate Through</h2>
+        <h2>Explore the Sections</h2>
         
-         <div class="box" onclick="window.location.href='https://ErannaTP.github.io/Portfolio/course_overview.html'">
+        <div class="box" onclick="window.location.href='https://ErannaTP.github.io/Portfolio/course_overview.html'">
             <h3>Course Overview</h3>
         </div>
 
-       
         <div class="box" onclick="window.location.href='https://DK-823.github.io/dummy.github.io/MyPortfolio.html'">
             <h3>My Portfolio</h3>
         </div>
