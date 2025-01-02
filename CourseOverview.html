@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +11,6 @@
             padding: 0;
             box-sizing: border-box;
         }
-
         body {
             font-family: 'Poppins', sans-serif;
             background-color: #121212;
@@ -22,7 +20,6 @@
             height: 100vh;
             overflow-x: hidden;
         }
-
         /* Sidebar styles */
         .sidebar {
             background-color: #1e1e1e;
@@ -35,18 +32,15 @@
             width: 250px;
             box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
         }
-
         .sidebar h2 {
             font-size: 2rem;
             margin-bottom: 2rem;
             color: #4a90e2;
         }
-
         .sidebar ul {
             list-style: none;
             padding: 0;
         }
-
         .sidebar ul li {
             margin: 1rem 0;
             padding: 0.75rem;
@@ -56,18 +50,18 @@
             cursor: pointer;
             transition: background 0.3s ease;
         }
-
         .sidebar ul li:hover {
             background-color: #4a90e2;
         }
-
         /* Main content styles */
         .main-content {
             padding: 2rem;
             margin-left: 250px;
             overflow-y: auto;
+            width: 85%; /* Increase width */
+            max-width: 1300px; /* Set max-width to prevent text from getting too wide */
+            margin: 0 auto;
         }
-
         header {
             background-color: #222;
             color: #fff;
@@ -77,12 +71,10 @@
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
             margin-bottom: 2rem;
         }
-
         header h1 {
             font-size: 3rem;
             color: #4a90e2;
         }
-
         section {
             background-color: #1e1e1e;
             padding: 2rem;
@@ -90,26 +82,21 @@
             box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
             margin-bottom: 2rem;
         }
-
         section h2 {
             font-size: 2rem;
             color: #4a90e2;
             margin-bottom: 1rem;
             text-transform: uppercase;
         }
-
-        p,
-        ul {
+        p, ul {
             font-size: 1.1rem;
             line-height: 1.6;
             color: #bbb;
         }
-
         ul {
             list-style: none;
             padding-left: 20px;
         }
-
         li {
             margin-bottom: 1rem;
             padding: 1rem;
@@ -117,12 +104,10 @@
             border-radius: 8px;
             transition: background 0.3s ease;
         }
-
         li:hover {
             background-color: #4a90e2;
             color: #fff;
         }
-
         footer {
             text-align: center;
             padding: 1rem;
@@ -131,33 +116,28 @@
             margin-top: 2rem;
             border-radius: 8px;
         }
-
         /* Media Queries */
         @media (max-width: 1024px) {
             body {
                 grid-template-columns: 1fr;
             }
-
             .sidebar {
                 width: 100%;
                 height: auto;
                 position: relative;
                 padding: 1rem;
             }
-
             .main-content {
                 margin-left: 0;
+                width: 100%;
             }
-
             header h1 {
                 font-size: 2.5rem;
             }
         }
     </style>
 </head>
-
 <body>
-
     <!-- Sidebar -->
     <div class="sidebar">
         <h2>Course Menu</h2>
@@ -200,41 +180,41 @@
                         <li>Heaps</li>
                     </ul>
                 </li>
-
-                <li>Algorithms</li>
-                <ul>
-                    <li>Sorting Algorithms</li>
-                    <li>Bubble Sort</li>
-                    <li>Insertion Sort</li>
-                    <li>Selection Sort</li>
-                    <li>Merge Sort</li>
-                    <li>Quick Sort</li>
-                    <li>Heap Sort</li>
-                </ul>
-
-                <li>String Matching Algorithms</li>
-                <ul>
-                    <li>Brute Force</li>
-                    <li>Boyer-Moore</li>
-                    <li>KMP</li>
-                    <li>Rabin-Karp</li>
-                </ul>
-
-                <li>Graph Algorithms</li>
-                <ul>
-                    <li>Breadth-First Search (BFS)</li>
-                    <li>Depth-First Search (DFS)</li>
-                    <li>Kruskal’s Algorithm</li>
-                    <li>Dijkstra’s Algorithm</li>
-                    <li>Bellman-Ford Algorithm</li>
-                    <li>Floyd-Warshall Algorithm</li>
-                </ul>
-
-                <li>Backtracking Algorithms</li>
-                <ul>
-                    <li>N-Queen Problem</li>
-                    <li>Subset Generation</li>
-                </ul>
+                <li>Algorithms
+                    <ul>
+                        <li>Sorting Algorithms</li>
+                        <li>Bubble Sort</li>
+                        <li>Insertion Sort</li>
+                        <li>Selection Sort</li>
+                        <li>Merge Sort</li>
+                        <li>Quick Sort</li>
+                        <li>Heap Sort</li>
+                    </ul>
+                </li>
+                <li>String Matching Algorithms
+                    <ul>
+                        <li>Brute Force</li>
+                        <li>Boyer-Moore</li>
+                        <li>KMP</li>
+                        <li>Rabin-Karp</li>
+                    </ul>
+                </li>
+                <li>Graph Algorithms
+                    <ul>
+                        <li>Breadth-First Search (BFS)</li>
+                        <li>Depth-First Search (DFS)</li>
+                        <li>Kruskal’s Algorithm</li>
+                        <li>Dijkstra’s Algorithm</li>
+                        <li>Bellman-Ford Algorithm</li>
+                        <li>Floyd-Warshall Algorithm</li>
+                    </ul>
+                </li>
+                <li>Backtracking Algorithms
+                    <ul>
+                        <li>N-Queen Problem</li>
+                        <li>Subset Generation</li>
+                    </ul>
+                </li>
             </ul>
         </section>
 
@@ -259,7 +239,5 @@
             &copy; 2024 Kshitij H. All Rights Reserved.
         </footer>
     </div>
-
 </body>
-
 </html>
