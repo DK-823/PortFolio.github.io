@@ -1,0 +1,136 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+// Node structure for linked list
+struct ShelterNode {
+    int shelterID;
+    bool isOccupied;
+    ShelterNode* next;
+
+    ShelterNode(int id, bool occupied = false) : shelterID(id), isOccupied(occupied), next(nullptr) {}
+};
+
+// Class to manage shelters
+class ShelterManager {
+private:
+    ShelterNode* head;
+
+public:
+    ShelterManager() : head(nullptr) {}
+
+    // Add a new shelter
+    void addShelter(int shelterID) {
+        ShelterNode* newNode = new ShelterNode(shelterID);
+        if (!head) {
+            head = newNode;
+        } else {
+            ShelterNode* temp = head;
+            while (temp->next) {
+                temp = temp->next;
+            }
+            temp->next = newNode;
+        }
+        cout << "Shelter " << shelterID << " has been added.\n";
+    }
+
+    // Allocate a vacant shelter
+    void allocateShelter() {
+        ShelterNode* temp = head;
+        while (temp) {
+            if (!temp->isOccupied) {
+                temp->isOccupied = true;
+                cout << "Shelter " << temp->shelterID << " has been allocated.\n";
+                return;
+            }
+            temp = temp->next;
+        }
+        cout << "No vacant shelters available.\n";
+    }
+
+    // Free an occupied shelter
+    void freeShelter(int shelterID) {
+        ShelterNode* temp = head;
+        while (temp) {
+            if (temp->shelterID == shelterID) {
+                if (temp->isOccupied) {
+                    temp->isOccupied = false;
+                    cout << "Shelter " << shelterID << " has been freed.\n";
+                } else {
+                    cout << "Shelter " << shelterID << " is already vacant.\n";
+                }
+                return;
+            }
+            temp = temp->next;
+        }
+        cout << "Shelter " << shelterID << " not found.\n";
+    }
+
+    // Display shelter statuses
+    void displayShelters() const {
+        if (!head) {
+            cout << "No shelters available.\n";
+            return;
+        }
+
+        ShelterNode* temp = head;
+        cout << "Shelter Statuses:\n";
+        while (temp) {
+            cout << "- Shelter " << temp->shelterID << ": " << (temp->isOccupied ? "Occupied" : "Vacant") << "\n";
+            temp = temp->next;
+        }
+    }
+
+    // Destructor to clean up memory
+    ~ShelterManager() {
+        ShelterNode* temp;
+        while (head) {
+            temp = head;
+            head = head->next;
+            delete temp;
+        }
+    }
+};
+
+int main() {
+    ShelterManager manager;
+    int choice, shelterID;
+
+    do {
+        cout << "\nShelter Management System\n";
+        cout << "1. Add a shelter\n";
+        cout << "2. Allocate a shelter\n";
+        cout << "3. Free a shelter\n";
+        cout << "4. Display all shelters\n";
+        cout << "5. Exit\n";
+        cout << "Enter your choice: ";
+        cin >> choice;
+
+        switch (choice) {
+            case 1:
+                cout << "Enter the shelter ID to add: ";
+                cin >> shelterID;
+                manager.addShelter(shelterID);
+                break;
+            case 2:
+                manager.allocateShelter();
+                break;
+            case 3:
+                cout << "Enter the shelter ID to free: ";
+                cin >> shelterID;
+                manager.freeShelter(shelterID);
+                break;
+            case 4:
+                manager.displayShelters();
+                break;
+            case 5:
+                cout << "Exiting...\n";
+                break;
+            default:
+                cout << "Invalid choice. Please try again.\n";
+        }
+    } while (choice != 5);
+
+    return 0;
+}
